@@ -1,0 +1,52 @@
+.header {
+	font-family: 'Arial';
+	font-size: 2.5em;
+	font-weight: bold;
+	color: gray;
+	vertical-align: middle;
+}
+
+.footer {
+	font-family: 'Arial';
+	font-size: 0.7em;
+	color: gray;
+}
+
+.section-header {
+	font-family: 'Arial';
+	font-size: 1.25em;
+	font-weight: bold;
+	color: white;
+	background-color: gray;
+}
+
+.logo-company-image {
+	max-width: 100%;
+	height: auto;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-right: 20px;
+	cursor: pointer;
+}
+
+div.my-grid {
+	background: transparent;
+	border: 0px;
+}
+
+.my-grid tr.z-row td.z-row-inner {
+	background: transparent;
+	border: 0px;
+	padding-right: 1em;
+	padding-bottom: 1em;
+}
+
+.my-grid tr.z-grid-odd {
+	background: transparent;
+	border: 0px;
+	background-color: transparent;
+}
+
+.my-grid div.z-grid-body {
+	background: transparent;
+}

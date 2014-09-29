@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<zk>
+	<preference>
+		<name>org.zkoss.zk.ui.WebApp.name</name>
+		<value>inCity - dataminer</value>
+	</preference>
+	<library-property>
+		<name>org.zkoss.zul.Button.mold</name>
+		<value>trendy</value>
+	</library-property>
+	<session-config>
+		<device-type>ajax</device-type>
+		<timeout-uri></timeout-uri>
+	</session-config>
+</zk>

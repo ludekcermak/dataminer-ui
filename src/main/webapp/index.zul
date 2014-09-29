@@ -1,0 +1,44 @@
+<?link rel="stylesheet" type="text/css" href="/styles/style.css" media="screen"?>
+<?link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon"?>
+<?meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; minimum-scale=0.8; user-scalable=1;"?>
+<?meta property="og:title" content="inCity - imports"?>
+<?page title="inCity - imports (dataminer)"?>
+<window id="notifWin" self="@define(content)" apply="cz.intelis.mobile.dataminerui.ui.MainController">
+	<div align="left">
+		<image src="/img/incity_64_64.png" sclass="logo-company-image">
+			<attribute name="onClick"><![CDATA[
+				execution.sendRedirect("http://www.intelis.cz");
+				]]>
+			</attribute>
+		</image>
+		<label value="inCity - imports (dataminer)" sclass="header" />
+	</div>
+	<separator bar="true"/>
+
+	<grid span="true" sclass="my-grid">
+		<columns>
+			<column width="15%"/>
+			<column width="15%"/>
+			<column />
+		</columns>
+		<rows>
+			<row>
+				<hbox>
+					<label sclass="section-header">Cities</label>
+				</hbox>
+				<hbox>
+					<label sclass="section-header">Imports</label>
+				</hbox>
+				<vbox>
+					<label sclass="section-header">Detail</label>
+					<label sclass="section-header">Status</label>
+				</vbox>
+			</row>
+		</rows>
+	</grid>	
+
+	<separator bar="true"/>
+	<div align="right">
+		<label value="© 2014, Intelis, spol. s r. o." sclass="footer" />
+	</div>
+</window>
