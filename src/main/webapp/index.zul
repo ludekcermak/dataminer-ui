@@ -3,7 +3,7 @@
 <?meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=2.0; minimum-scale=0.8; user-scalable=1;"?>
 <?meta property="og:title" content="inCity - imports"?>
 <?page title="inCity - imports (dataminer)"?>
-<window id="notifWin" self="@define(content)" apply="cz.intelis.mobile.dataminerui.ui.MainController">
+<window id="notifWin" self="@define(content)">
 	<div align="left">
 		<image src="/img/incity_64_64.png" sclass="logo-company-image">
 			<attribute name="onClick"><![CDATA[
@@ -15,24 +15,49 @@
 	</div>
 	<separator bar="true"/>
 
-	<grid span="true" sclass="my-grid">
+	<grid sclass="my-grid">
 		<columns>
 			<column width="15%"/>
 			<column width="15%"/>
+			<column width="35%"/>
 			<column />
 		</columns>
 		<rows>
 			<row>
-				<hbox>
-					<label sclass="section-header">Cities</label>
-				</hbox>
-				<hbox>
-					<label sclass="section-header">Imports</label>
-				</hbox>
-				<vbox>
-					<label sclass="section-header">Detail</label>
-					<label sclass="section-header">Status</label>
-				</vbox>
+				<window title="Cities" apply="org.zkoss.bind.BindComposer" viewModel="@id('vm') @init('cz.intelis.mobile.dataminerui.ui.ImportViewModel')" sclass="section-header">
+					<caption sclass="section-header"/>
+					<grid id="importListGrid" sizedByContent="true" model="@load(vm.importList)" emptyMessage="No item" mold="paging" pageSize="10">
+			            <columns menupopup="auto">
+			                <column width="30%"/>
+			                <column width="30%"/>
+			                <column />
+			            </columns>
+			            <template name="model" var="import1">
+			                <row>
+		               			<label value="@load(import1.city)"/>
+		               			<label value="@load(import1.module)"/>
+		               			<label value="@load(import1.cronExpression)"/>
+			                </row>
+			            </template>
+			            <zscript>
+			            	<![CDATA[
+			                	importListGrid.getPagingChild().setVisible(true);
+			                ]]>
+			    		</zscript>
+			        </grid>
+				</window>
+				<window title="Imports" sclass="section-header">
+					<caption sclass="section-header"/>
+					<label>Neco</label>
+				</window>
+				<window title="Detail" sclass="section-header">
+					<caption sclass="section-header"/>
+					<label>Neco</label>
+				</window>
+				<window title="Status" sclass="section-header">
+					<caption sclass="section-header"/>
+					<label>Neco</label>
+				</window>			
 			</row>
 		</rows>
 	</grid>	
